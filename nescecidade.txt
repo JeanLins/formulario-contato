@@ -1,0 +1,17 @@
+Nome e-mail celular CPF CEPpernoite Placa
+
+estudo 
+
+pattern="[1-9]{2}-[0-9]{9}" // telefone
+
+
+pattern="[0-9]{5}\-?\[0-9]{3}" // CEP
+
+Para ver a div
+border: 2px solid yellow;
+
+
+pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})" // dta nascimento
+
+
+onkeyup="validaDTA()" // se for usar sem o type="date"

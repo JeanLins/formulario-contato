@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forumlário de Contato</title>
+    <link rel="stylesheet" href="./stilodapagina.css" />
+    <script type="text/javascript" src="./recursos.js" defer></script>
+    
+  </head>
+  <body>
+    <div id="img_">
+      <img
+          src="./image/logo_asp.png"
+          alt="Logo da empresa ASP Corretora de Seguros."
+        />
+    </div>
+    <div id="titulo_">
+      <h2>Formulário de orçamento</h2>
+    </div>
+    <div id="forms_div_main">
+      <form
+        action="https://formsubmit.co/417b1ef941ebf027a34b3974c4322ffe"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_next"
+          value="http://192.168.1.147:5500/concluido.html"
+        />
+        <input type="hidden" name="_subject" value="Dados para cotação - ASP INTERNO">
+        <small>Nome</small>
+        <input
+          id="name"
+          type="text"
+          name="Nome"
+          placeholder="Seu nome completo"
+          title="Digite aqui seu nome completo."
+        />
+        <small>E-mail</small>
+        <input
+          id="mail_"
+          type="email"
+          name="email"
+          placeholder="seu-email@email"
+          title="Digite um e-mail válido"
+        />
+        <small>Telefone</small>
+        <input
+          type="tel"
+          name="celular"
+          id="celular"
+          maxlength="15"
+          onkeyup="validarTel() || gerarLink()"
+          placeholder="(11) 95008-9099"
+          title="Digite um telefone válido."
+        />
+        <input
+          type="hidden"
+          id="link_whats"
+          name="link_whatsapp"
+        />
+        <small>CPF</small>
+        <input
+          type="text"
+          id="RF"
+          name="cpf_cnpj"
+          placeholder="123.456.789-01"
+          onkeyup="validarRF()"
+          pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+          title="Digite o CPF ou CNPJ"
+        />
+        <small>Data nascimento</small>
+        <input
+          type="date"
+          id="nascimento_"
+          name="data_nascimento"
+          
+          title="Digite sua data de nascimento."
+        />
+        <small>CEP</small>
+        <input
+          type="text"
+          id="cep"
+          name="cep"
+          placeholder="04602-002"
+          onkeyup="validarCep()"
+          title="Digite o CEP onde o veículo passa a noite."
+        />
+        <small>Placa</small>
+        <input
+          type="text"
+          id="placa"
+          onkeyup="validarPlaca(this)"
+          maxlength="8"
+          name="placa"
+          placeholder="AAA-0000"
+          title="Digite a placa do veículo."
+        />
+        <small>Vencimento do seguro</small>
+        <input
+        type="date"
+        id="vigencia_"
+        name="vigencia_seguro"
+        
+        title="Digite a data que vence seu seguro."
+        />
+        <input
+          type="hidden"
+          id="vinculo_"
+          name="vinculo professor"
+        />
+        <small>Vínculo com profissional da educação</small>
+        <select 
+        onchange="escerve_info()"
+        id="select_">
+          <option value="nao"> </option>
+          <option value="sim"> Sou professor(a).</option>
+          <option value="sim"> Meus pais, filhos ou conjuges são professores(a).</option>
+          <option value="nao"> Nenhum.</option>
+        </select>
+    </div>
+    
+      <div id="btn">
+      <button id="send_" type="submit">Solicitar contato</button>
+      <button hidden onclick="falarWhats()" id="send_" type="button">Fale agora por WhatsApp</button>
+    </div>
+    </form>
+    
+  </body>
+</html>
